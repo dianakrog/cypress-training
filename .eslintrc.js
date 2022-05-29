@@ -14,6 +14,7 @@ module.exports = {
   "plugins": [
     "@typescript-eslint",
     "cypress",
+    "jsdoc",
   ],
   "rules": {
     "quotes": ["error", "double"],
@@ -24,5 +25,6 @@ module.exports = {
     "no-unused-vars": "warn",
     "require-jsdoc": "warn",
     "max-len": ["error", {"code": 120}],
+    "extends": ["plugin:jsdoc/recommended"],
   },
 };

@@ -1,25 +1,39 @@
+import { MenuContentPage } from "../page/menu-content.page";
+import { TShirtsPage } from "../page/t-shirts.page";
+import { SignInPage } from "../page/sign-in.page";
+import { AddressPage } from "../page/address.page";
+import { ShippingPage } from "../page/shipping.page";
+import { PaymentPage } from "../page/payment-step.page";
+
+const menuContentPage = new MenuContentPage();
+const tShirtsPage = new TShirtsPage();
+const signInPage = new SignInPage();
+const adressPage = new AddressPage();
+const shippingPage = new ShippingPage();
+const paymentPage = new PaymentPage();
+
+const email = 'aperdomobo@gmail.com';
+const passwd = 'WorkshopProtractor';
+
+
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
-    cy.visit("http://automationpractice.com/");
-    cy.get("#block_top_menu > ul > li:nth-child(3) > a").click();
-    cy.get("#center_column a.button.ajax_add_to_cart_button.btn.btn-default").click();
-    cy.get("[style*='display: block;'] .button-container > a").click();
-    cy.get(".cart_navigation span").click();
+    menuContentPage.visitMenuContentPage();
+    menuContentPage.goToTShirtMenu();
 
-    cy.get("#email").type("aperdomobo@gmail.com");
-    cy.get("#passwd").type("WorkshopProtractor");
+    tShirtsPage.addCartProductOne();
+    tShirtsPage.proceedCheckout();
 
-    cy.get("#SubmitLogin").click();
+    signInPage.signIn(email, passwd);        
 
-    cy.get("#center_column > form > p > button").click();
+    adressPage.proceedCheckout();
 
-    cy.get("#cgv").click();
-    cy.get("#form > p > button").click();
+    shippingPage.acceptTermsService();
+    shippingPage.proceedCheckout();
 
-    cy.get("#HOOK_PAYMENT > div:nth-child(1) > div > p > a").click();
-
-    cy.get("#cart_navigation > button").click();
-
+    paymentPage.slectPayMethod();
+    paymentPage.confirmOrder();
+    
     cy.get("#center_column > div > p > strong")
         .should("have.text", "Your order on My Store is complete.");
   });
