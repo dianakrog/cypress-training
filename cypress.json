@@ -1,5 +1,5 @@
 {
-    "video": true,
+    "video": false,
     "screenshotOnRunFailure": false,
     "defaultCommandTimeout": 20000,
     "responseTimeout": 20000
