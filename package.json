@@ -1,0 +1,25 @@
+{
+  "name": "cypress-training",
+  "version": "1.0.0",
+  "description": "This is a Workshop about Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dianakrog/cypress-training.git"
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "cypress"
+  ],
+  "author": "Diana Carolina Gutierrez Contreras <dianacaro46@gmail.com> (dianakrog)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dianakrog/cypress-training/issues"
+  },
+  "homepage": "https://github.com/dianakrog/cypress-training#readme"
+}
