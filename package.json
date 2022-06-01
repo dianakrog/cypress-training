@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/dianakrog/cypress-training/issues"
   },
-  "homepage": "https://github.com/dianakrog/cypress-training#readme"
+  "homepage": "https://github.com/dianakrog/cypress-training#readme",
+  "devDependencies": {
+    "cypress": "^9.7.0"
+  }
 }
