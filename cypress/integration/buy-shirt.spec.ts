@@ -1,9 +1,9 @@
-import { MenuContentPage } from "../page/menu-content.page";
-import { TShirtsPage } from "../page/t-shirts.page";
-import { SignInPage } from "../page/sign-in.page";
-import { AddressPage } from "../page/address.page";
-import { ShippingPage } from "../page/shipping.page";
-import { PaymentPage } from "../page/payment-step.page";
+import {MenuContentPage} from "../page/menu-content.page";
+import {TShirtsPage} from "../page/t-shirts.page";
+import {SignInPage} from "../page/sign-in.page";
+import {AddressPage} from "../page/address.page";
+import {ShippingPage} from "../page/shipping.page";
+import {PaymentPage} from "../page/payment-step.page";
 
 const menuContentPage = new MenuContentPage();
 const tShirtsPage = new TShirtsPage();
@@ -12,8 +12,8 @@ const adressPage = new AddressPage();
 const shippingPage = new ShippingPage();
 const paymentPage = new PaymentPage();
 
-const email = 'aperdomobo@gmail.com';
-const passwd = 'WorkshopProtractor';
+const email = "aperdomobo@gmail.com";
+const passwd = "WorkshopProtractor";
 
 
 describe("Buy a t-shirt", () => {
@@ -24,7 +24,7 @@ describe("Buy a t-shirt", () => {
     tShirtsPage.addCartProductOne();
     tShirtsPage.proceedCheckout();
 
-    signInPage.signIn(email, passwd);        
+    signInPage.signIn(email, passwd);
 
     adressPage.proceedCheckout();
 
@@ -33,7 +33,7 @@ describe("Buy a t-shirt", () => {
 
     paymentPage.slectPayMethod();
     paymentPage.confirmOrder();
-    
+
     paymentPage.verififyOrder();
   });
 });

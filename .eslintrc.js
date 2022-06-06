@@ -25,6 +25,6 @@ module.exports = {
     "no-unused-vars": "warn",
     "require-jsdoc": "warn",
     "max-len": ["error", {"code": 120}],
-    "extends": ["plugin:jsdoc/recommended"],
+    "extends": [0],
   },
 };
