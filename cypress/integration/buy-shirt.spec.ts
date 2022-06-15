@@ -1,12 +1,14 @@
 import {MenuContentPage} from "../page/menu-content.page";
-import {TShirtsPage} from "../page/products-list.page";
+import {ProductsListPage} from "../page/products-list.page";
+import { ShopingCartPage } from "../page/shoping-cart.page";
 import {SignInPage} from "../page/login.page";
 import {AddressPage} from "../page/address-step.page";
 import {ShippingPage} from "../page/shipping-step.page";
 import {PaymentPage} from "../page/payment-step.page";
 
 const menuContentPage = new MenuContentPage();
-const tShirtsPage = new TShirtsPage();
+const productsListPage = new ProductsListPage();
+const shopingCartPage = new ShopingCartPage();
 const signInPage = new SignInPage();
 const adressPage = new AddressPage();
 const shippingPage = new ShippingPage();
@@ -21,8 +23,9 @@ describe("Buy a t-shirt", () => {
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
 
-    tShirtsPage.addCartProductOne();
-    tShirtsPage.proceedCheckout();
+    productsListPage.addCartProductOne();
+
+    shopingCartPage.proceedCheckout();
 
     signInPage.signIn(email, passwd);
 
