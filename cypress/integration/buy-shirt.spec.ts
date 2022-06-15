@@ -1,8 +1,8 @@
 import {MenuContentPage} from "../page/menu-content.page";
-import {TShirtsPage} from "../page/t-shirts.page";
-import {SignInPage} from "../page/sign-in.page";
-import {AddressPage} from "../page/address.page";
-import {ShippingPage} from "../page/shipping.page";
+import {TShirtsPage} from "../page/products-list.page";
+import {SignInPage} from "../page/login.page";
+import {AddressPage} from "../page/address-step.page";
+import {ShippingPage} from "../page/shipping-step.page";
 import {PaymentPage} from "../page/payment-step.page";
 
 const menuContentPage = new MenuContentPage();

@@ -20,5 +20,3 @@ class TShirtsPage {
   }
   
   export {TShirtsPage};
-
-  
