@@ -1,6 +1,6 @@
 import {MenuContentPage} from "../page/menu-content.page";
 import {ProductsListPage} from "../page/products-list.page";
-import { ShopingCartPage } from "../page/shoping-cart.page";
+import {ShopingCartPage} from "../page/shoping-cart.page";
 import {SignInPage} from "../page/login.page";
 import {AddressPage} from "../page/address-step.page";
 import {ShippingPage} from "../page/shipping-step.page";
