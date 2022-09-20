@@ -19,7 +19,7 @@ const passwd = "WorkshopProtractor";
 
 
 describe("Buy a t-shirt", () => {
-  it("then the t-shirt should be bought", () => {
+  it("then should be bought a t-shirt", () => {
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
 
@@ -34,9 +34,9 @@ describe("Buy a t-shirt", () => {
     shippingPage.acceptTermsService();
     shippingPage.proceedCheckout();
 
-    paymentPage.slectPayMethod();
+    paymentPage.selectPaymentMethod();
     paymentPage.confirmOrder();
 
-    paymentPage.verififyOrder();
+    paymentPage.verifyOrderMessage();
   });
 });

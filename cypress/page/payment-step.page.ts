@@ -10,7 +10,7 @@ class PaymentPage {
 
       }
     
-      public slectPayMethod(): void {
+      public selectPaymentMethod(): void {
         cy.get(this.btnPayByBank).click();
       }
 
@@ -18,7 +18,7 @@ class PaymentPage {
         cy.get(this.btnConfirmOrder).click();
       }
 
-      public verififyOrder(): void {
+      public verifyOrderMessage(): void {
         const textOrder = cy.get(this.txtVerifyOrder)
           .should("have.text", "Your order on My Store is complete.");
       }
