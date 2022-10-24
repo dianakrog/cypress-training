@@ -18,7 +18,7 @@ const paymentPage = new PaymentPage();
 
 const email = "aperdomobo@gmail.com";
 const passwd = "WorkshopProtractor";
-const orderMessage = "Your order on My Store is complete."
+const orderMessage = "Your order on My Store is complete.";
 
 
 describe("Buy a t-shirt", () => {
