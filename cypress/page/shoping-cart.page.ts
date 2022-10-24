@@ -11,4 +11,3 @@ class ShopingCartPage {
     }
     
     export {ShopingCartPage};
-  
