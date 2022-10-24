@@ -1,10 +1,12 @@
-import {MenuContentPage} from "../page/menu-content.page";
-import {ProductsListPage} from "../page/products-list.page";
-import {ShopingCartPage} from "../page/shoping-cart.page";
-import {SignInPage} from "../page/login.page";
-import {AddressPage} from "../page/address-step.page";
-import {ShippingPage} from "../page/shipping-step.page";
-import {PaymentPage} from "../page/payment-step.page";
+import {
+  MenuContentPage,
+  ProductsListPage,
+  ShopingCartPage,
+  SignInPage,
+  AddressPage,
+  ShippingPage,
+  PaymentPage,
+} from "../page/index";
 
 const menuContentPage = new MenuContentPage();
 const productsListPage = new ProductsListPage();
@@ -16,6 +18,7 @@ const paymentPage = new PaymentPage();
 
 const email = "aperdomobo@gmail.com";
 const passwd = "WorkshopProtractor";
+const orderMessage = "Your order on My Store is complete."
 
 
 describe("Buy a t-shirt", () => {
@@ -37,6 +40,6 @@ describe("Buy a t-shirt", () => {
     paymentPage.selectPaymentMethod();
     paymentPage.confirmOrder();
 
-    paymentPage.verifyOrderMessage();
+    paymentPage.verifyOrderMessage(orderMessage);
   });
 });

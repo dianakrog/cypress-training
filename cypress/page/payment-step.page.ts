@@ -18,9 +18,9 @@ class PaymentPage {
         cy.get(this.btnConfirmOrder).click();
       }
 
-      public verifyOrderMessage(): void {
+      public verifyOrderMessage(orderMessage: string): void {
         const textOrder = cy.get(this.txtVerifyOrder)
-          .should("have.text", "Your order on My Store is complete.");
+          .should("have.text", orderMessage);
       }
 
     }
