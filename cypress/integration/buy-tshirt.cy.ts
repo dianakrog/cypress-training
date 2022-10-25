@@ -16,30 +16,28 @@ const adressPage = new AddressPage();
 const shippingPage = new ShippingPage();
 const paymentPage = new PaymentPage();
 
-const email = "aperdomobo@gmail.com";
-const passwd = "WorkshopProtractor";
-const orderMessage = "Your order on My Store is complete.";
-
+let email: string;
+let passwd: string;
+let orderMessage: string;
 
 describe("Buy a t-shirt", () => {
-  it("then should be bought a t-shirt", () => {
+  before(() => {
+    email = "aperdomobo@gmail.com";
+    passwd = "WorkshopProtractor";
+    orderMessage = "Your order on My Store is complete.";
     menuContentPage.visitMenuContentPage();
+  });
+
+  it("then should be bought a t-shirt", () => {
     menuContentPage.goToTShirtMenu();
-
     productsListPage.addCartProductOne();
-
     shopingCartPage.proceedCheckout();
-
     signInPage.signIn(email, passwd);
-
     adressPage.proceedCheckout();
-
     shippingPage.acceptTermsService();
     shippingPage.proceedCheckout();
-
     paymentPage.selectPaymentMethod();
     paymentPage.confirmOrder();
-
     paymentPage.verifyOrderMessage(orderMessage);
   });
 });
