@@ -9,7 +9,6 @@ import {
 } from "../page/index";
 
 describe("Buy a t-shirt", () => {
-
   let menuContentPage: MenuContentPage;
   let productsListPage: ProductsListPage;
   let shopingCartPage: ShopingCartPage;
