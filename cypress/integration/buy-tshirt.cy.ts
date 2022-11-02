@@ -20,6 +20,7 @@ describe("Buy a t-shirt", () => {
   let email: string;
   let passwd: string;
   let orderMessage: string;
+  let productToBuy: string;
 
   before(() => {
     menuContentPage = new MenuContentPage();
@@ -34,12 +35,13 @@ describe("Buy a t-shirt", () => {
     email = "aperdomobo@gmail.com";
     passwd = "WorkshopProtractor";
     orderMessage = "Your order on My Store is complete.";
+    productToBuy = "Faded Short Sleeve T-shirts";
     menuContentPage.visitMenuContentPage();
   });
 
   it("then should be bought a t-shirt", () => {
     menuContentPage.goToTShirtMenu();
-    productsListPage.addCartProductOne();
+    productsListPage.addTShirtToCart(productToBuy);
     shopingCartPage.proceedCheckout();
     signInPage.signIn(email, passwd);
     adressPage.proceedCheckout();

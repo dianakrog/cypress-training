@@ -1,16 +1,22 @@
 class ProductsListPage {
   private sectionProductOne: string;  
   private btnAddCartProductOne: string;
+  private productElements: string;
   
   constructor() {
     this.sectionProductOne = "#center_column a.button.ajax_add_to_cart_button.btn.btn-default"
-    this.btnAddCartProductOne = "[style*='display: block;'] .button-container > a";
+    this.btnAddCartProductOne = ".ajax_add_to_cart_button > span";
+    this.productElements = ".right-block";
   }
   
-    public addCartProductOne(): void {
-      cy.get(this.sectionProductOne).click();
-      cy.get(this.btnAddCartProductOne).click();
-    }
+  public addTShirtToCart(product: string): void {
+    this.findProductByName(product).find(this.btnAddCartProductOne).click();
+    cy.get(this.btnAddCartProductOne).click();
+  }
+
+  private findProductByName(product: string) {
+    return cy.get(this.productElements).filter(`:contains(${product})`);
+  }
   
   }
   
