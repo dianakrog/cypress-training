@@ -10,7 +10,8 @@ cypress/results/*
 cypress/reports/*
 cypress/screenshots/*
 cypress/videos/*
-cypress/integration/examples/*
+cypress/e2e/1-getting-started/*
+cypress/e2e/2-advanced-examples/*
 
 ### Node ###
 # Logs
@@ -170,12 +171,6 @@ dist
 # Ignore all local history of files
 .history
 .ionide
-
-# Support for Project snippet scope
-.vscode/*.code-snippets
-
-# Ignore code-workspaces
-*.code-workspace
 
 ### Windows ###
 # Windows thumbnail cache files
